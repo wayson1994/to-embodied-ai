@@ -1,0 +1,2 @@
+  3278677      0 -rw-------   2 wayson   wayson          0 10月  3 15:14 /home/wayson/projects/to-embodied-ai/linux101/hard_link
+  3278677      0 -rw-------   2 wayson   wayson          0 10月  3 15:14 /home/wayson/projects/to-embodied-ai/linux101/hard_link2
