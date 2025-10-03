@@ -1,0 +1,9 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'demo.blg'
+[62] biber:340> INFO - === 五 10月  3, 2025, 23:35:37
+[84] Biber.pm:419> INFO - Reading 'demo.bcf'
+[151] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
+[160] bbl.pm:660> INFO - Writing 'demo.bbl' with encoding 'UTF-8'
+[161] bbl.pm:763> INFO - Output to demo.bbl
+[161] Biber.pm:131> WARN - The file 'demo.bcf' does not contain any citations!
+[161] Biber.pm:133> INFO - WARNINGS: 1
