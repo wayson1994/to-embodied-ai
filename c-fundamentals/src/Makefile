@@ -22,3 +22,6 @@ $(BUILD):
 .PHONY: clean
 clean:
 	rm -rf $(BUILD)
+	
+.PHONY: rebuild
+rebuild: clean $(TARGET)
