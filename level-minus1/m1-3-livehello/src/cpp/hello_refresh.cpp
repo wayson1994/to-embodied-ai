@@ -20,7 +20,7 @@
 
     for (int counter = 0; counter < 100; counter++)
     {
-        std::count << "\rHello " << counter << std::flush;
+        std::cout << "\rHello " << counter << std::flush;
 
         std::this_thread::sleep_for(period);
     }

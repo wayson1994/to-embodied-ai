@@ -25,8 +25,8 @@ $(PY_TARGET): $(PY_SOURCES)
 #========== File Collections ==========
 C_SOURCES	:= $(wildcard $(C_SRC_DIR)/*.c)
 CPP_SOURCES	:= $(wildcard $(CPP_SRC_DIR)/*.cpp)
-C_OBJS		:= $(patsubst %.c,$(BUILD_DIR)/%.o,$(notdir $(C_SOURCES)))
-CPP_OBJS    := $(patsubst %.cpp,$(BUILD_DIR)/%.o,$(notdir $(CPP_SOURCES)))
+C_OBJS		:= $(patsubst $(C_SRC_DIR)/%.c,$(BUILD_DIR)/c/%.o,$(C_SOURCES))
+CPP_OBJS	:= $(patsubst $(CPP_SRC_DIR)/%.cpp,$(BUILD_DIR)/cpp/%.o,$(CPP_SOURCES))
 
 C_TARGET	:= $(BUILD_DIR)/main_c
 CPP_TARGET	:= $(BUILD_DIR)/main_cpp
@@ -40,14 +40,16 @@ all			:  $(C_TARGET) $(CPP_TARGET) run-py
 $(C_TARGET)	:  $(C_OBJS)
 	$(CC) $(CFLAGS) $^ -o $@
 
-$(BUILD_DIR)/%.o : $(C_SRC_DIR)/%.c
+$(BUILD_DIR)/c/%.o : $(C_SRC_DIR)/%.c
+	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 #---------- Cpp Compilation ---------
 $(CPP_TARGET)	:  $(CPP_OBJS)
 	$(CPP) $(CPPFLAGS) $^ -o $@
 
-$(BUILD_DIR)/%.o : $(CPP_SRC_DIR)/%.cpp
+$(BUILD_DIR)/cpp/%.o : $(CPP_SRC_DIR)/%.cpp
+	@mkdir -p $(dir $@)
 	$(CPP) $(CPPFLAGS) -c $< -o $@
 
 #---------- Run ----------
