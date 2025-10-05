@@ -1,7 +1,0 @@
-# deploy.yml
-- hosts: localhost
-  tasks:
-    - name: ensure build dir
-      file: path=../build state=directory
-    - name: compile
-      shell: make -C ../src
