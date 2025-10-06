@@ -24,18 +24,18 @@ int main(int argc, char *argv[])
             printf("%d - %d = %d\n", a, b, minus(a, b));
             break;
         case '*':
-            printf("%d\n", mul(a, b));
+            printf("%d * %d = %d\n", a, b, mul(a, b));
             break;
         case '/':
             if (b == 0)
             {
-                fprintf(stderr, "Error: divede by zero\n");
+                fprintf(stderr, "Error: divide by zero\n");
                 break;
             }
-            printf("%.6f\n", divide(a, b));
+            printf("%d / %d = %.6f\n", a, b, divide(a, b));
             break;
         case '%':
-            printf("%d\n", mod(a, b));
+            printf("%d %% %d = %d\n", a, b, mod(a, b));
             break;
         default:
             fprintf(stderr, "Error: unknown op '%c'\n", op);
@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
 
         else if (yes[0] == 'y')
         {
-            printf("\n")
+            printf("\n");
             // system("clear"); // test.sh看结果，先注释
         }
     }
