@@ -1,0 +1,1 @@
+double divide(int x, int y) { return ((double)x) / ((double)y); }
