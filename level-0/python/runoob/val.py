@@ -24,3 +24,84 @@ print(type(a)) # <class 'int'>
 print(type(b)) # <class 'int'>
 print(type(c)) # <class 'str'>
 print(type(is_active)) # # <class 'bool'>
+
+# number
+# int float bool complex
+a, b, c, d = 20, 5.5, True, 4 + 3j
+print(type(a)) # <class 'int'>
+print(type(b)) # <class 'float'>
+print(type(c)) # <class 'bool'>
+print(type(d)) # <class 'complex'>
+
+a = 111
+print(isinstance(a, int)) # True
+
+# different between type and isinstance
+class A:
+    pass
+class B(A):
+    pass
+print(isinstance(A(), A)) # True
+print(type(A())) # <class '__main__.A'>
+print(isinstance(B(), A)) # True
+print(type(B())) # <class '__main__.B'> (not A)
+
+# bool is a subclass of int, True == 1, False == 0
+c = True
+print(isinstance(c, int)) # True
+print(True + 1) # 2
+print(False + 1) # 1
+
+# del
+del a, b, c, d
+
+# String
+str = "wayson"
+print(str) # wayson
+print(str[0]) # w
+print(str[0:-1]) # wayso
+print(str[2:5]) # yso
+print(str[2: ]) # yson
+print(str * 2) # waysonwayon
+print(str + "TEST") # waysonTEST
+
+# \
+print("way\nson")
+# way
+# son
+print(r"way\nson") # way\nson, adding an 'r' in front of a String indicates a raw string
+
+# and or not
+print(True and True) # True
+print(False and False) # True
+print(True and False) # False
+
+print(True or True) # True
+print(True or False) # True
+print(False or False) # False
+
+print(not False) # True
+print(not True) # False
+print(not 1) # False
+print(not 0) # True
+
+# compare
+print(5 > 3) # True
+print(2 == 2) # True
+print(7 < 4) # False
+
+# ternary operator
+a, b = 10, 20
+print(a if a > b else b) # 20
+
+# list
+list = [ "asd", "b", "c", 100, 100.1 ]
+tinylist = [ 123, "wayson"]
+
+print(list) # [ "asd", "b", "c", 100, 100.1 ]
+print(list[0]) # a
+print(list[1:3]) # [ "b", "c" ]
+print(list[2: ]) # [ "b", "c", 100, 100.1 ]
+print(tinylist * 2) # [ 123, "wayson", 123, "wayson" ]
+print(list + tinylist) # [ "asd", "b", "c", 100, 100.1, 123, "wayson"]
+
