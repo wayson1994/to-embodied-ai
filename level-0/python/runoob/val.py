@@ -36,7 +36,7 @@ print(type(d)) # <class 'complex'>
 a = 111
 print(isinstance(a, int)) # True
 
-# different between type and isinstance
+# differences between type and isinstance
 class A:
     pass
 class B(A):
@@ -105,3 +105,26 @@ print(list[2: ]) # [ "b", "c", 100, 100.1 ]
 print(tinylist * 2) # [ 123, "wayson", 123, "wayson" ]
 print(list + tinylist) # [ "asd", "b", "c", 100, 100.1, 123, "wayson"]
 
+a = [ 1, 2, 3, 4, 5, 6 ]
+a[0] = 9 # [ 9, 2, 3, 4, 5, 6 ]
+a[2:5] = [ 13, 14, 15 ] # [ 9, 2, 13, 14, 15, 6 ]
+a[2:5] = [] # [9, 2, 6]
+print(a)
+
+letters = [ "w", "a", "y", "s", "o", "n", "s", "t", "u", "d", "i", "o"]
+print(letters[1:6:2]) # [ "a", "s", "n"]
+# from letters[1] to letters[6], step 2
+print(letters[-1::-1]) # ['o', 'i', 'd', 'u', 't', 's', 'n', 'o', 's', 'y', 'a', 'w']
+
+# tuple
+tuple = ( "abcd", 786, 2.23, "wayson", 70.2)
+
+# differences between list and tuple:
+# 1.tuple is immutable, list is mutable
+# 2.tuple use (), list use []
+# 3.tuple has fewer methods, list has more methods
+# 4.tuple is faster
+# 5.tuple is used when data should remain constant, list is used when data may change
+# 6.tuple is hashable, list is not hashable
+
+# TODO : set dict bytes
