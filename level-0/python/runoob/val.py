@@ -119,12 +119,38 @@ print(letters[-1::-1]) # ['o', 'i', 'd', 'u', 't', 's', 'n', 'o', 's', 'y', 'a',
 # tuple
 tuple = ( "abcd", 786, 2.23, "wayson", 70.2)
 
-# differences between list and tuple:
-# 1.tuple is immutable, list is mutable
-# 2.tuple use (), list use []
-# 3.tuple has fewer methods, list has more methods
-# 4.tuple is faster
-# 5.tuple is used when data should remain constant, list is used when data may change
-# 6.tuple is hashable, list is not hashable
+'''
+ differences between list and tuple:
+ 1.tuple is immutable, list is mutable
+ 2.tuple use (), list use []
+ 3.tuple has fewer methods, list has more methods
+ 4.tuple is faster
+ 5.tuple is used when data should remain constant, list is used when data may change
+ 6.tuple is hashable, list is not hashable
+'''
+ 
+# set
+sites = {"aaa", "bbb", "ccc", "aaa", "ddd", "bbb"}
+print(sites) # {'aaa', 'ccc', 'bbb', 'ddd'} 
 
-# TODO : set dict bytes
+# function of set:
+# 1. remove duplicates
+del list # keyword
+lists = list(set([ 1, 2, 2, 3, 3, 3 ]))
+print(lists) # [ 1, 2, 3 ]
+# 2. logical reasoning
+set1 = { "Wayson", "Bob", "Jack" }
+set2 = { "Wayson", "Ace", "Kenny" }
+print(set1 & set2) # {'wayson'}
+# 3. faster than list when checking if a value exist (no example)
+
+# dictionary { key : value }
+dict = {}
+dict["name"] = "wayson"
+dict[0] = "hello dictionary"
+print(dict) # {'name': 'wayson', 0: 'hello dictionary'}
+print(dict["name"]) # wayson
+print(dict.keys()) # dict_keys(['name', 0])
+print(dict.values()) # dict_values(['wayson', 'hello dictionary'])
+
+# bytes
