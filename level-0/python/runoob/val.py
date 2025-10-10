@@ -152,5 +152,3 @@ print(dict) # {'name': 'wayson', 0: 'hello dictionary'}
 print(dict["name"]) # wayson
 print(dict.keys()) # dict_keys(['name', 0])
 print(dict.values()) # dict_values(['wayson', 'hello dictionary'])
-
-# bytes
