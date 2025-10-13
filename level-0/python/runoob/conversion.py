@@ -45,9 +45,8 @@ print(type(str_x)) # <class 'str'>
 print(type(str_y)) # <class 'str'>
 print(type(str_z)) # <class 'str'>
 
-# TODO 
+# just know it, will learn it later
 # repr(x)
-
 # eval(str)
 # tuple(s)
 # list(s)
